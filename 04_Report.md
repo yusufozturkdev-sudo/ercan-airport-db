@@ -240,7 +240,7 @@ SELECT * FROM vw_airplane_health;
 
 ## 8. GitHub Repository
 
-All project files are published at: **[GitHub repo URL buraya]**
+All project files are published at: **https://github.com/yusufozturkdev-sudo/ercan-airport-db**
 
 ```
 Repository structure:
@@ -250,4 +250,3 @@ Repository structure:
 ├── 04_Report.md      → This report
 └── README.md         → Setup instructions
 ```
-
