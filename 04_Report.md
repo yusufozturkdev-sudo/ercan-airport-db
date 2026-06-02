@@ -40,9 +40,11 @@ The database supports the following operational areas:
 
 ## 2. ER Diagram
 
-*(See the ERD rendered in the GitHub repository)*
+![ER Diagram](ERD_Chen.png)
 
-### Entities (14 tables)
+> **Notation:** Chen ER Notation — rectangles = entities, ellipses = attributes (underlined = PK), diamonds = relationships, ISA triangle = supertype/subtype hierarchy, double rectangle = weak entity, double diamond = identifying relationship.
+
+### Entities (15 tables)
 
 | Table | Type | Description |
 |-------|------|-------------|
@@ -54,9 +56,9 @@ The database supports the following operational areas:
 | `Airplane_Model` | Master | Aircraft model catalog |
 | `Airplane` | Entity | Individual aircraft |
 | `Hangar` | Entity | Physical hangar bays |
-| `Hangar_Stay` | History | Airplane ↔ Hangar with timestamps |
+| `Hangar_Stay` | Weak Entity | Airplane ↔ Hangar with IN/OUT timestamps |
 | `Test_Type` | Master | Airworthiness test catalog |
-| `Testing_Event` | Transaction | Each individual test instance |
+| `Testing_Event` | Transaction | Each individual test instance (ternary) |
 | `Runway` | Entity | Airport runways |
 | `Flight` | Transaction | Flight records |
 | `Fuel_Record` | Transaction | Fuel refueling records |
@@ -244,9 +246,10 @@ All project files are published at: **https://github.com/yusufozturkdev-sudo/erc
 
 ```
 Repository structure:
-├── 01_DDL.sql        → Schema: 14 tables, 3 views, 3 triggers, 3 stored procedures
+├── 01_DDL.sql        → Schema: 15 tables, 3 views, 3 triggers, 3 stored procedures
 ├── 02_DML.sql        → Sample data + UPDATE/DELETE examples
 ├── 03_Queries.sql    → 15 management queries
 ├── 04_Report.md      → This report
+├── ERD_Chen.png      → ER Diagram (Chen Notation)
 └── README.md         → Setup instructions
 ```
